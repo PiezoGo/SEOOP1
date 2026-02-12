@@ -22,10 +22,15 @@ class FileDemo{
 	    ifstream content;
 	    string text;
 	    content.open("myfile.txt");
-	    while(content>>text){
+	    // while(content>>text){
 		
+		// cout<<text<<endl;
+	    // }
+        while(!content.eof()){
+		getline(content,text);
 		cout<<text<<endl;
 	    }
+
 	content.close();
 
 	}
